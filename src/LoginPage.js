@@ -18,7 +18,9 @@ const useStyles = makeStyles((theme) => ({
         height: '25rem',
          width: '31rem',
          padding: '2rem',
-         
+         [theme.breakpoints.down('sm')] : {
+             width : '25rem'
+         }
     },
     formContainer : {
         marginTop: '1rem'
@@ -37,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
     office :{
         backgroundImage : `url(${officeBackground})`,
-        backgroundPosition : 'left 150% top 105%',
+        backgroundPosition : 'right bottom',
         backgroundRepeat : 'no-repeat',
         backgroundSize: 'cover',
         width : '60%',
@@ -47,8 +49,18 @@ const useStyles = makeStyles((theme) => ({
         zIndex : '-1',
         borderTopLeftRadius  : '20px',
         borderTopRightRadius  : '20px',
-        [theme.breakpoints.down('sm')] :{
-            width :'100%'
+        [theme.breakpoints.down('md')] :{
+            width :'80%',
+            backgroundPosition : 'center'
+        },
+        [theme.breakpoints.down('sm')] : {
+            width : '80%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width : '100%',
+            backgroundPosition : 'center',
+            borderRadius : '0px'
+
         }
     },
     background : {
@@ -57,8 +69,21 @@ const useStyles = makeStyles((theme) => ({
         height  : '60%',
         position : 'absolute',
         zIndex : '-1',
-        bottom  : 0
-    }
+        bottom  : 0,
+        [theme.breakpoints.down('md')] :{
+            width :'80%',
+            backgroundPosition : 'center'
+        },
+        [theme.breakpoints.down('sm')] : {
+            width : '80%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width : '100%',
+            backgroundPosition : 'center'
+
+        }
+    },
+    
 
 }))
 
