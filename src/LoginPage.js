@@ -19,7 +19,9 @@ const useStyles = makeStyles((theme) => ({
          width: '31rem',
          padding: '2rem',
          [theme.breakpoints.down('sm')] : {
-             width : '25rem'
+             height : 'auto',
+             width : '80%',
+             
          }
     },
     formContainer : {
@@ -146,10 +148,10 @@ const LoginPage = () => {
                 <Grid container  justify= 'center' alignItems='center'>
                         <ButtonBase>
                     <Grid item>
-                    <img  src={help} style={{width :'1rem', height : '1rem', marginRight :'5px'}} />
+                    <img   src={help} style={{width :'1rem', height : '1rem', marginRight :'5px'}} alt='help icon' />
                     </Grid>
                     <Grid item>
-                    <Typography variant='caption' > Need help signing in ?</Typography>
+                    <Typography variant='caption' > Need help signing in?</Typography>
                     </Grid>
                     </ButtonBase>
                 </Grid>
